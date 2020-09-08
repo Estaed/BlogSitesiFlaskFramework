@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <div class = "jumbotron text-center">
+        <h3>TB Bloğuna Hoşgeldiniz</h3>
+        <p>Bu blogta geliştiriciler olarak yazılarınızı paylaşabilir yazılım dünyasına atılacak olanlara yol gösterebilirsiniz</p>
+    </div>
+
+    <ul>
+        {% for article in articles %}
+            <li>Article id: {{article.id}} - Title: {{article.title}} - Content: {{article.content}}</li>
+        {% endfor %}
+    </ul>
+
+{% endblock body %}
